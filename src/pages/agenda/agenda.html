@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only showWhen="portrait">
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Agenda
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="auto-scroll">
+  <ion-list no-lines *ngFor="let item of agenda">
+    <ion-item-divider color="light">{{ item.time }}</ion-item-divider>
+    <ion-item *ngFor="let activity of item.activities">
+      <ion-avatar item-start *ngIf="activity.person">
+        <img src="{{ activity.person.image }}">
+      </ion-avatar>
+      <h2 *ngIf="activity.person">{{ activity.person.name }}</h2>
+      <h3>{{ activity.title }}</h3>
+      <p *ngIf="activity.person"><small>{{ activity.location }}</small></p>
+    </ion-item>
+  </ion-list>
+</ion-content>

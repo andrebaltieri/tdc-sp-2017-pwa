@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only showWhen="portrait">
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Trilha Modern Web
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="auto-scroll">
+  <div padding>
+    <h2>Trilha Modern Web<br><small>Desenvolvimento Web Moderno</small></h2>
+    <p>
+      Vamos descobrir as belezas e novidades do desenvolvimento web moderno com tudo que há de mais novo e bonito, desde protocolos
+      de comunicação a ferramentas de automação de tarefas, passando por todo o ciclo de vida do desenvolvimento e apreciar
+      tudo que compõe o desenvolvimento de aplicações web modernas.
+    </p>
+  </div>
+
+  <ion-list no-lines hideWhen="landscape">
+    <ion-item-divider color="dark">Coordenadores</ion-item-divider>
+    <button ion-item *ngFor="let item of coordinators" (click)="showOptions(item)">
+      <ion-avatar item-start>
+        <img src="{{ item.image }}">
+      </ion-avatar>
+      <h2>{{ item.name }}</h2>
+      <p><strong>{{ item.company }}</strong></p>
+    </button>
+  </ion-list>
+
+  <ion-list no-lines hideWhen="portrait">
+    <ion-item-divider color="dark">Coordenadores</ion-item-divider>
+  </ion-list>
+  <ion-grid hideWhen="portrait">
+    <ion-row>
+      <ion-col col-12 col-xl-3 *ngFor="let item of coordinators">
+        <ion-card>
+          <img src="{{ item.image }}" />
+          <ion-card-content>
+            <ion-card-title>
+              {{ item.name }}
+            </ion-card-title>
+            <p><strong>{{ item.company }}</strong><br><small>{{ item.email }}</small></p>
+          </ion-card-content>
+          <p text-right>
+            <button ion-button clear color="primary" (click)="showOptions(item)">Mais Detalhes</button>
+          </p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

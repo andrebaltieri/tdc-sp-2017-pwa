@@ -1,0 +1,19 @@
+<ion-split-pane>
+  <ion-menu [content]="content">
+    <ion-content class="auto-scroll">
+      <div text-center>
+        <br>
+        <img src="assets/logo.png" alt="#TheDevConf"><br>
+        <br>
+      </div>
+      <ion-list no-lines>
+        <button ion-item menuToggle (click)="goToHome()">Home</button>
+        <button ion-item menuToggle (click)="goToAgenda()">Agenda</button>
+        <button ion-item menuToggle (click)="goToLocation()">Localização</button>       
+        <button ion-item menuToggle>Deixe sua Mensagem</button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav [root]="rootPage" main #content></ion-nav>
+</ion-split-pane>
