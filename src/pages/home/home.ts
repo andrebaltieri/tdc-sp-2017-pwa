@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, NavController, ActionSheetController, ModalController } from 'ionic-angular';
+import { Platform, ActionSheetController, ModalController } from 'ionic-angular';
 import { PersonDetailsPage } from '../person-details/person-details';
 
 @Component({
@@ -11,7 +11,6 @@ export class HomePage {
 
   constructor(
     private platform: Platform,
-    private navCtrl: NavController,
     private actionSheetCtrl: ActionSheetController,
     public modalCtrl: ModalController) {
     this.coordinators.push({ name: 'André Baltieri', email: 'contato@andrebaltieri.net', image: 'assets/images/coordinators/andrebaltieri.jpg', company: 'balta.io', url: 'http://balta.io', bio: 'Microsoft MVP desde 2013, trabalha com aplicações Web desde 2013 tendo atuado em projetos de pequeno, médio e grande porte no Brasil e Estados Unidos. Apesar do grande vínculo com a Microsoft, é amante das tecnologias Open Source, onde atua boa parte do tempo. Atualmente trabalha com consultorias e treinamentos, tendo passado por inúmeras empresas no Brasil, e é CIO da plataforma de cursos online, balta.io.' })
@@ -37,7 +36,7 @@ export class HomePage {
 
   showDetails(item) {
     let modal = this.modalCtrl.create(PersonDetailsPage, { person: item });
-    modal.present();    
+    modal.present();
   }
 
 }

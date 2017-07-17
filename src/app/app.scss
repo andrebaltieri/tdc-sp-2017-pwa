@@ -17,8 +17,8 @@ ion-content {
   font-family: 'Fira Sans', sans-serif !important;
 }
 
-.auto-scroll .scroll-content{
-     overflow: auto;
+.auto-scroll .scroll-content {
+  overflow: auto;
 }
 
 .profile-picture {
@@ -26,4 +26,9 @@ ion-content {
   height: 128px;
   border-radius: 128px;
   border: 5px solid #1D99D5;
+}
+
+#pwa-canvas {
+  border: 15px solid #222;
+  padding: 10px;
 }

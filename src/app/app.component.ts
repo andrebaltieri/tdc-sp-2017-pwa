@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { AgendaPage } from '../pages/agenda/agenda';
 import { LocationPage } from '../pages/location/location';
+import { MessagePage } from '../pages/message/message';
 
 @Component({
   templateUrl: 'app.html'
@@ -35,6 +36,10 @@ export class MyApp {
 
   goToLocation() {
     this.content.setRoot(LocationPage);
+  }
+
+  goToMessage() {
+    this.content.setRoot(MessagePage);
   }
 }
 

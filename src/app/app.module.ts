@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { PersonDetailsPage } from '../pages/person-details/person-details';
 import { AgendaPage } from '../pages/agenda/agenda';
 import { LocationPage } from '../pages/location/location';
+import { MessagePage } from '../pages/message/message';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LocationPage } from '../pages/location/location';
     HomePage,
     PersonDetailsPage,
     AgendaPage,
-    LocationPage
+    LocationPage,
+    MessagePage
   ],
   imports: [
     BrowserModule,
@@ -28,12 +30,13 @@ import { LocationPage } from '../pages/location/location';
     HomePage,
     PersonDetailsPage,
     AgendaPage,
-    LocationPage
+    LocationPage,
+    MessagePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
